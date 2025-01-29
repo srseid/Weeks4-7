@@ -7,8 +7,10 @@ public class EnableDisable : MonoBehaviour
     public SpriteRenderer sr;
     public EnableDisable script;
     public GameObject go;
-
+    public AudioSource audioSource;
+    public AudioClip clip;
    
+    
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
@@ -31,6 +33,18 @@ public class EnableDisable : MonoBehaviour
             //script.enabled = true;
             
             go.SetActive(true);
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (audioSource.isPlaying == false)
+            {
+                //    audioSource.Play();
+
+                audioSource.PlayOneShot(clip);
+                //just this code plays the sound every frame
+                //playing sound in clip (inspector)
+            }
         }
     }
 }
