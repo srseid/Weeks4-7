@@ -17,7 +17,8 @@ public class EnableDisable : MonoBehaviour
         {
             
             //sr.enabled = false;
-            //sr.enabled =!sr.enabled; if it is false make true, if true make false
+            //sr.enabled =!sr.enabled;
+            //if it is false make true, if true make false
 
             //script.enabled = true;
             //activate script
