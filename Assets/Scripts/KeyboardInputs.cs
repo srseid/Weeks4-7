@@ -28,15 +28,15 @@ public class KeyboardInputs : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        /*if (BoxCollider2D.isTouching(collision))
+        /*if (BoxCollider2D.(collision))
         {
             SpeechBubble.SetActive(true);
         }
-        */
-        if( collision.gameObject.tag == "Chicken")
+     */   
+       /* if( collision.gameObject.tag == "Chicken")
         {
             SpeechBubble.SetActive(true);
         }
-   
+   */
     }
 }
