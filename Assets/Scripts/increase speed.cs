@@ -28,7 +28,7 @@ public class increasespeed : MonoBehaviour
     {
         Debug.Log("I am Speed!!");
         //plus();
-        
+        //
     }
 
     
