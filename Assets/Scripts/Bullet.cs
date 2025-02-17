@@ -5,8 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 2;
-    //public float angle = 1;
-    //public float size = 1;
+    public float size;
+    public float Ang;
 
     public SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
@@ -22,25 +22,29 @@ public class Bullet : MonoBehaviour
         pos.x += speed * Time.deltaTime;
         //pos.y += speed * Time.deltaTime;
         transform.position = pos;
-/*
-        Vector3.one rot = transform.rotation;
-        rot.z += angle;
-        transform.rotation = rot;
+        transform.eulerAngles = Vector3.zero;
+        
 
-        Vector2 scale = transform.LocalScale;
-        scale.x += size * 2;
-        transform.LocalScale = scale;
-*/
-    }
-    /*
-    public void Increase(float size)
-    {
-        spriteRenderer.transform.localScale = new Vector3(2f, 2f, 2f);
     }
 
-    public void Decrease(float size)
+
+    public void ScaleUp(float scaleBullet)
     {
-        spriteRenderer.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
+        
+        Vector3 sizeUp = new Vector3(scaleBullet, scaleBullet, scaleBullet);
+        transform.localScale += sizeUp;
+        
     }
-    */
+
+    public void ScaleDown(float scaleBullet)
+    {
+        Vector3 sizeDown = new Vector3(-scaleBullet, -scaleBullet, -scaleBullet);
+        transform.localScale += sizeDown;
+    }
+
+    public void RotateBullet(float angle)
+    {
+        Vector3 rotUp = new Vector3(angle, angle, -angle);
+        transform.eulerAngles += rotUp;
+    }
 }
