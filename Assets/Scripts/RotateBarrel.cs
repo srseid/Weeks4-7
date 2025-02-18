@@ -8,25 +8,18 @@ public class RotateBarrel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    public void AngleUp(float rotBull)
-    {
-
-        Vector3 rotUp = new Vector3(rotBull, rotBull, rotBull);
-        //transform.eulerAngle += rotUp;
 
     }
+   
 
     public void AngleDown(float rotBull)
     {
-        Vector3 rotDown = new Vector3(-rotBull,-rotBull,-rotBull);
-        //transform.eulerAngle += rotDown;
-    }
+    transform.localEulerAngles = new Vector3(0,0,25);
+}
 }

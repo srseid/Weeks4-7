@@ -12,6 +12,7 @@ public class CreateBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //put clones in list
         createAmmo = new List<GameObject>();
     }
 
@@ -36,6 +37,7 @@ public class CreateBullet : MonoBehaviour
 
     public void Create()
     {
+        //create bullet when pressing create button
         GameObject bullets = Instantiate(prefab, transform);
         createAmmo.Add(bullets);
         Destroy(bullets, 3);
