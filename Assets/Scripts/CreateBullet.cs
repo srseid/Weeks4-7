@@ -9,6 +9,7 @@ public class CreateBullet : MonoBehaviour
     public GameObject prefab;
 
     public List<GameObject> createAmmo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,27 +20,16 @@ public class CreateBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if(Input.GetMouseButtonDown(0))
-        {
-            GameObject bullets = Instantiate(prefab, transform);
-            createAmmo.Add(bullets);
-            //Instantiate(prefab);
-            //Instantiate(prefab, //position//, transform.rotation);
-            //makes prefab same rotation as spawner gameobject
-            //clone original thing, make the prefab
-
-            Destroy(bullets, 3);
-            //destroy prefab in 3 seconds}
-        }
-        */
         }
 
     public void Create()
     {
-        //create bullet when pressing create button
+        //launch bullet when pressing create button
         GameObject bullets = Instantiate(prefab, transform);
+        //make
         createAmmo.Add(bullets);
-        Destroy(bullets, 3);
+        //add to list
+        Destroy(bullets, 5);
+        //destroy after 5 seconds
     }
 }
